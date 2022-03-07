@@ -3,3 +3,7 @@ class changmin:
         pass
     def introduce(self):
         print("changmin")
+
+if __name__ == '__main__':
+    person = changmin()
+    person.introduce()
