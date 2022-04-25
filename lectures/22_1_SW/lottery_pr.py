@@ -8,17 +8,20 @@ if __name__=='__main__':
     name = df_sheet_index["성명"].to_list()
     N = len(gwa)
 
-    seed_ = 4478
+    seed_ = 2204251101
     random.seed(seed_)
-    teams = list(range(1,N+1))  
+    teams = list(range(0,N))  
 
     random.shuffle(teams)
-
-    for ind, (g,n) in enumerate(zip(gwa,name)):
+    
+    gwa_ = [gwa[i] for i in teams]
+    name_ = [name[i] for i in teams]
+    
+    for ind, (g,n) in enumerate(zip(gwa_,name_)):
         if ind < N/2:
-            print(f"오늘 발표 {ind+1} 번째 = {g} {n[:-1]}* ")
+            print(f"4월 27일 수요일 발표 {ind+1} 번째 = {g} {n[:-1]}* ")
         else: 
-            print(f"다음 발표 {ind-(N//2)} 번째 ={g} {n[:-1]}*")
+            print(f"5월 2일 발표 {ind-(N//2)} 번째 ={g} {n[:-1]}*")
     
 # teams = list(range(1,40))
 

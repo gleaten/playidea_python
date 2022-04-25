@@ -1,3 +1,5 @@
+import numpy as np
+
 class TwoWheelRobot:
     """2륜로봇 클래스 
     __init__ : 
